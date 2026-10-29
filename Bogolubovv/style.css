@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: gainsboro;
+    color: #f3f3f3;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.poster {
+    position: relative;
+    width: min(1100px, 94vw);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: gainsboro;
+}
+
+.superText {
+    position: absolute;
+    top: 43%;
+    left: 52%;
+    z-index: 1;
+    width: 68%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #111;
+}
+
+.portrait-stage {
+    position: relative;
+    width: 100%;
+    height: min(520px, 48vw);
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+}
+
+.speech-bubble {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.sonner {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: gainsboro;
+}
+.main {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: end;
+    width: 100%;
+    max-height: 78%;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(1.1);
+}
+
+.year-wrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -1.5rem;
+    color: black;
+}
+
+.year-wrap h1 {
+    margin: 0;
+    font-size: clamp(5rem, 10vw, 12rem);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    color: black;
+    font-weight: 700;
+}
+
+.uk10 {
+color: black;
+
+}
+
+@media (max-width: 700px) {
+    .poster {
+        padding: 2rem 0 3rem;
+    }
+
+    .superText {
+        width: 66%;
+        font-size: clamp(0.85rem, 3.2vw, 1.15rem);
+    }
+
+    .portrait-stage {
+        height: min(340px, 72vw);
+        min-height: 230px;
+    }
+
+    .main {
+        width: 100%;
+    }
+}
